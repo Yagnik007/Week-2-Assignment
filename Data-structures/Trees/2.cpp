@@ -13,14 +13,10 @@ struct Node
     }
 };
 
-void inorder(struct Node *node)
+int heightOfBinaryTree(Node* root)
 {
-    if (node == NULL)
-        return;
-
-    inorder(node->left);
-    cout << node->data << " ";
-    inorder(node->right);
+    if(root == nullptr) return 0;
+    return max(heightOfBinaryTree(root -> left),heightOfBinaryTree(root -> right))+1;
 }
 
 int main()
@@ -32,9 +28,6 @@ int main()
     root->left->right = new Node(4);
     root->right->right = new Node(12);
     root->right->left = new Node(9);
-
-    cout << "\nInorder traversal of binary tree is \n";
-    inorder(root);
-    cout << "\n";
+    cout<<heightOfBinaryTree(root)<<endl;
     return 0;
 }
