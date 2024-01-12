@@ -36,7 +36,7 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    int gcdAnswer;
+    int gcdAnswer = a[0];
     for (int i = 1; i < n; i++)
     {
         gcdAnswer = gcd(a[i], gcdAnswer);
