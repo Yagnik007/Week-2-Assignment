@@ -4,7 +4,6 @@ class Shape
 {
 public:
     virtual double calculateArea() const = 0;
-
     virtual double calculatePerimeter() const = 0;
 };
 
@@ -36,4 +35,4 @@ int main()
     std::cout << "Rectangle - Area: " << rectangle.calculateArea() << ", Perimeter: " << rectangle.calculatePerimeter() << std::endl;
 
     return 0;
-}
+}   
