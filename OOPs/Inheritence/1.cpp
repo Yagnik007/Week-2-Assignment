@@ -1,38 +1,37 @@
-#include <iostream>
+#include <bits/stdc++.h>
+#define pi 3.141592
+using namespace std;
 
 class Shape
 {
 public:
     virtual double calculateArea() const = 0;
+
     virtual double calculatePerimeter() const = 0;
 };
 
 class Rectangle : public Shape
 {
+
 private:
     double length;
     double width;
 
 public:
-    Rectangle(double l, double w) : length(l), width(w) {}
-
-    double calculateArea() const override
+    Rectangle()
     {
-        return length * width;
-    }
-
-    double calculatePerimeter() const override
-    {
-        return 2 * (length + width);
+        cout << "Enter length and width of the rectangle: ";
+        cin >> length >> width;
+        area = length * width;
+        perimeter = 2 * (length + width);
     }
 };
 
 int main()
 {
-
-    Rectangle rectangle(4.0, 6.0);
-
-    std::cout << "Rectangle - Area: " << rectangle.calculateArea() << ", Perimeter: " << rectangle.calculatePerimeter() << std::endl;
-
+    Rectangle r;
+    r.showArea();
+    r.showPerimeter();
     return 0;
-}   
+    return 0;
+}
