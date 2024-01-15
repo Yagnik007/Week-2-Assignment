@@ -33,10 +33,28 @@ public:
     }
 };
 
+class Circle : public Shape{
+
+private:
+    double radius;
+
+public:
+    Circle()
+    {
+        cout << "Enter the radius: ";
+        cin >> radius;
+        area = pi*radius*radius;
+        perimeter = 2*pi*radius;
+    }
+};
+
 int main()
 {
     Rectangle r;
     r.showArea();
     r.showPerimeter();
+    Circle c;
+    c.showArea();
+    c.showPerimeter();
     return 0;
 }
