@@ -1,0 +1,2 @@
+
+    // weatherStation.registerObserver(&display2);
