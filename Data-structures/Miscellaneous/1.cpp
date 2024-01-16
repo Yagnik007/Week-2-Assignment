@@ -3,22 +3,20 @@ using namespace std;
 
 int main()
 {
-    string s;
-    cout<<"Enter the string: ";
-    cin>>s;
+    string str;
     stack<string> st;
-    stringstream str(s);
+    cout<<"Enter the string: ";
+    getline(cin, str);
     string word;
-    while(str >> word)
+    stringstream ss(str);
+    while(ss >> word)
     {
         st.push(word);
     }
-    s = "";
     while(st.size())
     {
-        s+=(st.top());
+        cout<<st.top()<<" ";
         st.pop();
-        s+=" ";
     }
-    cout<<s<<endl;
+    return 0;
 }
